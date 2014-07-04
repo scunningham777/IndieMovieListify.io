@@ -1,0 +1,17 @@
+@import 'vendor/bootstrap-sass-official/vendor/assets/stylesheets/bootstrap';
+
+html, body {
+  margin: 30px 0;
+}
+
+.indie-brand {
+	color: #fff !important;
+}
+
+.indie-brand:hover {
+	color: #44E8CC !important;
+}
+
+.btn-indie:hover {
+	background-color: #44E8CC;
+}

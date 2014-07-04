@@ -1,0 +1,26 @@
+<h2 >Top ten indie movies
+	{{sort-by-rating-button action="toggleSort"}}
+</h2>
+<div class="table-responsive">
+	<table class="table table-striped">
+		<thead>
+			<th>Title</th>
+			<th>Release Year</th>
+			<th>Rating</th>
+			<th>Director</th>
+		</thead>
+
+		{{#each movie in sortedMovies}}
+			<tr>
+				<td>{{movie.show_title}}</td>
+				<td>{{movie.release_year}}</td>
+				<td>{{movie.rating}}</td>
+				<td>
+					{{#link-to "director" movie.director}}
+						{{movie.director}}
+					{{/link-to}}
+				</td>
+			</tr>
+		{{/each}}
+	</table>
+</div>

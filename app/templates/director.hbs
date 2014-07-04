@@ -1,0 +1,24 @@
+<h2>Movies directed by {{director}}
+	{{sort-by-rating-button action="toggleSort"}}
+</h2>
+{{#if isLoaded}}
+<div class="table-responsive">
+	<table class="table table-striped">
+		<thead>
+			<th>Title</th>
+			<th>Release Year</th>
+			<th>Rating</th>
+		</thead>
+
+		{{#each movie in sortedMovies}}
+			<tr>
+				<td>{{movie.show_title}}</td>
+				<td>{{movie.release_year}}</td>
+				<td>{{movie.rating}}</td>
+			</tr>
+		{{/each}}
+	</table>
+</div>
+{{else}}
+<p class="loading">Loading Movies</p>
+{{/if}}

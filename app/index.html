@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <title>Indie</title>
+    <meta name="description" content="">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    {{BASE_TAG}}
+
+    <link rel="stylesheet" href="assets/vendor.css">
+    <link rel="stylesheet" href="assets/indie.css">
+    <link rel="stylesheet" href="vendor/"
+  </head>
+  <body>
+    <script>
+      window.IndieENV = {{ENV}};
+      window.EmberENV = window.IndieENV.EmberENV;
+    </script>
+    <script src="assets/vendor.js"></script>
+    <script src="assets/indie.js"></script>
+    <script>
+      window.Indie = require('indie/app')['default'].create(IndieENV.APP);
+    </script>
+  </body>
+</html>
